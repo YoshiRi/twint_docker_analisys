@@ -1,9 +1,9 @@
 import json
 
 sdic=[]
-with open("slam_hub_twint.json", 'r',encoding="utf-8") as f:
+with open("slam_hub_twint.json", 'r',encoding="utf-8", errors='ignore') as f:
     for line in f:
-        data = json.loads(line)
+        data = json.loads(line,strict=False)
         sdic.append(data)
 
 
